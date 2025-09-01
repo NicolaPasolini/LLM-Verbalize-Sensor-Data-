@@ -1,49 +1,59 @@
 # LLM-Verbalize-Sensor-Data
 
-This project explores the use of Large Language Models (LLMs) for **verbalizing, interpreting, and predicting sensor data** across two domains:
-
-- **Human Activity Recognition (HAR):** Classification of exercises from wearable sensors (wrist, pocket, leg), with evaluation of zero-shot, few-shot, and Retrieval-Augmented Generation (RAG) techniques.  
-- **Occupancy Estimation (Environmental Monitoring):** Prediction of sensor trends, classification of room occupancy, and generation of descriptive explanations.
+This project explores the use of Large Language Models (LLMs) to verbalize, interpret and predict sensor data in two application domains:
+-   **Human Activity Recognition (HAR):**Classification of physical exercises using data from wearable sensors (wrist, pocket, leg), with evaluation of zero-shot, few-shot and Retrieval-Augmented Generation (RAG) techniques.
+-   **Occupancy Estimation:** Predict sensor behavior, classify room occupancy, and generate descriptive explanations.
 
 ---
 
 ## 1. Human Activity Recognition (HAR)
 
-- **Input:** CSV dataset (`RecGym.csv`) + knowledge base (`knowledge_base.json`)  
-- **Output:** Accuracy logs (`results_log.csv`) and predictions (`results.json`)  
+This module classifies physical exercises using data from wearable sensors.
+
+-   **Input:**
+    -   Dataset in formato CSV: `RecGym.csv`
+    -   Knowledge base opzionale per RAG: `knowledge_base.json`
+-   **Output:**
+    -   Log delle performance: `results_log.csv`
+    -   Predizioni in formato JSON: `results.json`
 
 ### Setup
+
+1.  **Install dependencies:**
+    ```bash
+    pip install numpy pandas tqdm scikit-learn langchain-core nomic ollama
+    ```
+
+2.  **Eseguire il login a Nomic:**
+    ```bash
+    nomic login --token <YOUR_NOMIC_API_KEY>
+    ```
+
+### Esecuzione
+
+Per avviare l'esperimento, eseguire lo script principale:
 ```bash
-pip install numpy pandas tqdm scikit-learn langchain-core nomic ollama
-nomic login --token <YOUR_API_KEY>
-### Run
-'''bash
 python main.py
+```
 
+## 2. Occupancy Estimation
 
-2) Occupancy Estimation
+Questo modulo va oltre la semplice classificazione, richiedendo ai modelli di eseguire un'analisi in tre fasi basata sui dati dei sensori ambientali:
 
-The primary task goes beyond simple classification, requiring the models to perform a three-stage analysis:
+FORECAST: Prevedere l'evoluzione numerica dei valori dei sensori.
+ANALYZE: Generare un'analisi testuale che spieghi il ragionamento alla base della previsione.
+CLASSIFY: Classificare la variazione nell'occupazione della stanza.
 
-PREDICT: Predict the numerical evolution of the sensors.
+Prerequisiti
+Dataset: Scaricare il file Occupancy_Estimation.csv da UCI Machine Learning Repository.
 
-ANALYZE: Generate a textual analysis that explains its reasoning.
-
-PREDICT: Classify the change in room occupancy.
-
-The project includes quantitative performance analysis (accuracy, MAE, execution time) and automated qualitative evaluation of the textual analyses using an LLM-as-a-Judge approach.
-
-Prerequisites
-  * File data: the dataset Occupancy_Estimation.csv is in https://archive.ics.uci.edu/dataset/864/room+occupancy+estimation
-  * Model : Download the LLM Templates: Run the cell that executes the ollama pull commands. The required templates are:
-            llama3.1:8b (Template for the experiment)
-            zephyr (Template for the experiment)
-            llama3.1:70b (Template "judge" for qualitative evaluation)
-
-Result 
-
-This run generates the files :
-   llm_forecast_results.csv : The complete file with the detailed results of each single query executed (input, model output, times, etc.).
-   performance summary.csv : a summary table with aggregated quantitative metrics for each experimental configuration.
-   qualitative_evaluation_sample.csv : Containing the quality scores (Relevance, Clarity, Consistency) and justifications assigned by the judge model to a sample of the results.
-
+Modelli LLM: 
+Assicurarsi di aver scaricato i modelli necessari tramite Ollama.
+```bash
+# Modello principale per l'esperimento
+ollama pull llama3.1:8b
+# Modello alternativo per l'esperimento
+ollama pull zephyr
+# Modello "giudice" per la valutazione qualitativa
+ollama pull llama3.1:70b
+```
