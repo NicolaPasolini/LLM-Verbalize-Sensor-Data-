@@ -1,12 +1,18 @@
 # LLM-Verbalize-Sensor-Data-
+This project explores the use of Large Language Models (LLM) for verbalizing and interpreting sensor data across various domains.
 
+Human Activity Recognition (HAR): Classification of human movements from sensory inputs, 
+                                    with evaluation of Retrieval-Augmented Generation (RAG) techniques to improve accuracy and contextualization.
+
+Environmental Monitoring : Speech and classification of environmental states using time windows in the data, 
+                               with generation of descriptive explanations and predictive trends.
+                               
 1) HAR
+   
    
 
 
 3) Occupancy Estimation
-
-This project uses several open-source large-scale linguistic models (LLMs) to analyze, interpret, and verbalize time-series sensor data from a room occupancy monitoring        environment.
 
 The primary task goes beyond simple classification, requiring the models to perform a three-stage analysis:
 
