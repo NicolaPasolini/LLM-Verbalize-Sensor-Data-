@@ -9,7 +9,7 @@ This project explores the use of Large Language Models (LLMs) for **verbalizing,
 
 ## 1. Human Activity Recognition (HAR)
 
-- **Input:** CSV dataset (`RecGym.csv`) + optional knowledge base (`knowledge_base.json`)  
+- **Input:** CSV dataset (`RecGym.csv`) + knowledge base (`knowledge_base.json`)  
 - **Output:** Accuracy logs (`results_log.csv`) and predictions (`results.json`)  
 
 ### Setup
