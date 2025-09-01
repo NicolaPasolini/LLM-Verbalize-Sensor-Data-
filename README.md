@@ -31,29 +31,29 @@ This module classifies physical exercises using data from wearable sensors.
 
 ### Esecuzione
 
-Per avviare l'esperimento, eseguire lo script principale:
+To run the experiment, run it:
 ```bash
 python main.py
 ```
 
 ## 2. Occupancy Estimation
 
-Questo modulo va oltre la semplice classificazione, richiedendo ai modelli di eseguire un'analisi in tre fasi basata sui dati dei sensori ambientali:
+This module goes beyond simple classification, requiring models to perform a three-step analysis based on environmental sensor data:
 
-FORECAST: Prevedere l'evoluzione numerica dei valori dei sensori.
-ANALYZE: Generare un'analisi testuale che spieghi il ragionamento alla base della previsione.
-CLASSIFY: Classificare la variazione nell'occupazione della stanza.
+FORECAST: Predict the numerical evolution of sensor values.
+ANALYZE: Generate a textual analysis explaining the reasoning behind the prediction.
+CLASSIFY: Classify the change in room occupancy.
 
-Prerequisiti
-Dataset: Scaricare il file Occupancy_Estimation.csv da UCI Machine Learning Repository.
+Prerequisites
+Dataset: Download the Occupancy_Estimation.csv file from the UCI Machine Learning Repository.
 
-Modelli LLM: 
-Assicurarsi di aver scaricato i modelli necessari tramite Ollama.
+LLM Models:
+Make sure you have downloaded the required models via Ollama.
 ```bash
-# Modello principale per l'esperimento
+# Main model for the experiment
 ollama pull llama3.1:8b
-# Modello alternativo per l'esperimento
+# Alternative model for the experiment
 ollama pull zephyr
-# Modello "giudice" per la valutazione qualitativa
+# "Judging" model for qualitative evaluation
 ollama pull llama3.1:70b
 ```
