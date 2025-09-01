@@ -57,3 +57,9 @@ ollama pull zephyr
 # "Judging" model for qualitative evaluation
 ollama pull llama3.1:70b
 ```
+Input:
+File data: The dataset is in https://archive.ics.uci.edu/dataset/864/room+occupancy+estimation
+Output:
+llm_forecast_results.csv: The complete file with the detailed results of each single query executed.
+performance_summary.csv: A summary table with aggregate quantitative metrics for each experimental setup.
+qualitative_evaluation_sample.csv: A file containing the quality scores (Relevance, Clarity, Consistency) and justifications assigned by the judge model to a sample of the results.
