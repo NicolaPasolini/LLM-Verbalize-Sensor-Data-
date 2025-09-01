@@ -14,8 +14,8 @@ This module classifies physical exercises using data from wearable sensors.
     -   Dataset in formato CSV: `RecGym.csv`
     -   Knowledge base opzionale per RAG: `knowledge_base.json`
 -   **Output:**
-    -   Log delle performance: `results_log.csv`
-    -   Predizioni in formato JSON: `results.json`
+    -   accuracy log: `results_log.csv`
+    -   predictions: `results.json`
 
 ### Setup
 
@@ -24,14 +24,14 @@ This module classifies physical exercises using data from wearable sensors.
     pip install numpy pandas tqdm scikit-learn langchain-core nomic ollama
     ```
 
-2.  **Eseguire il login a Nomic:**
+2.  **Log into Nomic:**
     ```bash
     nomic login --token <YOUR_NOMIC_API_KEY>
     ```
 
-### Esecuzione
+### Execution
 
-To run the experiment, run it:
+To run the experiment:
 ```bash
 python main.py
 ```
