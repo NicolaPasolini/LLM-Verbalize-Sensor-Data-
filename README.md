@@ -1,18 +1,27 @@
-# LLM-Verbalize-Sensor-Data-
-This project explores the use of Large Language Models (LLM) for verbalizing and interpreting sensor data across various domains.
+# LLM-Verbalize-Sensor-Data
 
-Human Activity Recognition (HAR): Classification of human movements from sensory inputs, 
-                                    with evaluation of Retrieval-Augmented Generation (RAG) techniques to improve accuracy and contextualization.
+This project explores the use of Large Language Models (LLMs) for **verbalizing, interpreting, and predicting sensor data** across two domains:
 
-Environmental Monitoring : Speech and classification of environmental states using time windows in the data, 
-                               with generation of descriptive explanations and predictive trends.
-                               
-1) HAR
-   
-   
+- **Human Activity Recognition (HAR):** Classification of exercises from wearable sensors (wrist, pocket, leg), with evaluation of zero-shot, few-shot, and Retrieval-Augmented Generation (RAG) techniques.  
+- **Occupancy Estimation (Environmental Monitoring):** Prediction of sensor trends, classification of room occupancy, and generation of descriptive explanations.
+
+---
+
+## 1. Human Activity Recognition (HAR)
+
+- **Input:** CSV dataset (`RecGym.csv`) + optional knowledge base (`knowledge_base.json`)  
+- **Output:** Accuracy logs (`results_log.csv`) and predictions (`results.json`)  
+
+### Setup
+```bash
+pip install numpy pandas tqdm scikit-learn langchain-core nomic ollama
+nomic login --token <YOUR_API_KEY>
+### Run
+'''bash
+python main.py
 
 
-3) Occupancy Estimation
+2) Occupancy Estimation
 
 The primary task goes beyond simple classification, requiring the models to perform a three-stage analysis:
 
