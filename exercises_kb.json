@@ -1,0 +1,57 @@
+[
+  {
+    "id": "Adductor",
+    "text": "The adductor exercise primarily targets the inner thigh muscles (adductor group).",
+    "sensor_profile": "moderate acc_mean_mag on leg; low gyro_energy on wrist and pocket; movement localized to thigh area"
+  },
+  {
+    "id": "ArmCurl",
+    "text": "The arm curl (bicep curl) is a strength training exercise targeting the biceps brachii.",
+    "sensor_profile": "high acc_mean_mag and gyro_energy on wrist; very low movement on leg and pocket"
+  },
+  {
+    "id": "BenchPress",
+    "text": "The bench press is a compound upper body exercise targeting chest, triceps, and shoulders.",
+    "sensor_profile": "high acc_mean_mag and gyro_energy on wrist; minimal movement on leg and pocket"
+  },
+  {
+    "id": "LegCurl",
+    "text": "The leg curl isolates the hamstring muscles by flexing the knee against resistance.",
+    "sensor_profile": "high acc_mean_mag and gyro_energy on leg; low wrist activity; minimal pocket movement"
+  },
+  {
+    "id": "LegPress",
+    "text": "The leg press is a compound lower body exercise targeting quadriceps, glutes, and hamstrings.",
+    "sensor_profile": "very high acc_mean_mag on leg; moderate pocket movement; low wrist activity"
+  },
+  {
+    "id": "Riding",
+    "text": "Riding (cycling) engages quadriceps, hamstrings, calves, and glutes, improving endurance.",
+    "sensor_profile": "cyclic high acc_mean_mag and gyro_energy on leg and pocket; steady but moderate wrist movement"
+  },
+  {
+    "id": "RopeSkipping",
+    "text": "Rope skipping is a plyometric and aerobic exercise that improves coordination and cardiovascular endurance.",
+    "sensor_profile": "very high acc_mean_mag and gyro_energy on leg; repetitive oscillations on pocket; medium-to-high wrist activity"
+  },
+  {
+    "id": "Running",
+    "text": "Running is an aerobic activity engaging the entire lower body and improving cardiovascular health.",
+    "sensor_profile": "very high acc_mean_mag and gyro_energy on leg and pocket; repetitive oscillatory pattern; medium wrist activity"
+  },
+  {
+    "id": "Squat",
+    "text": "The squat is a compound strength exercise targeting quadriceps, glutes, hamstrings, and core.",
+    "sensor_profile": "high acc_mean_mag and acc_std_mag on leg; moderate pocket activity; low wrist movement"
+  },
+  {
+    "id": "StairsClimber",
+    "text": "The stair climber simulates climbing stairs, engaging quadriceps, hamstrings, glutes, and calves.",
+    "sensor_profile": "high acc_mean_mag and gyro_energy on leg; repetitive upward pattern; low wrist activity; moderate pocket movement"
+  },
+  {
+    "id": "Walking",
+    "text": "Walking is a low-impact aerobic activity engaging quadriceps, hamstrings, and calves.",
+    "sensor_profile": "moderate acc_mean_mag on leg; cyclic but smoother than running; low-to-moderate pocket movement; minimal wrist activity"
+  }
+]
